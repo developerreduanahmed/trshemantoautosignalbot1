@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TR Shemanto Auto Signal Bot</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+ 
+
+<div class="container">
+   <div id="utcTime"></div>
+
+    <h1>TR Shemanto</h1>
+
+    <h2>Auto Signal Bot</h2>
+
+    <!-- Market -->
+    <div class="input-box">
+        <label>Market</label>
+
+        <select id="market">
+
+            <option>EUR/USD OTC</option>
+            <option>GBP/USD OTC</option>
+            <option>USD/JPY OTC</option>
+            <option>AUD/USD OTC</option>
+            <option>NZD/USD OTC</option>
+            <option>USD/CAD OTC</option>
+            <option>EUR/JPY OTC</option>
+            <option>GBP/JPY OTC</option>
+            <option>EUR/GBP OTC</option>
+            <option>EUR/AUD OTC</option>
+            <option>AUD/JPY OTC</option>
+            <option>GBP/CAD OTC</option>
+            <option>EUR/CAD OTC</option>
+            <option>CAD/JPY OTC</option>
+            <option>CHF/JPY OTC</option>
+            <option>USD/CHF OTC</option>
+            <option>AUD/CAD OTC</option>
+            <option>GBP/AUD OTC</option>
+            <option>EUR/CHF OTC</option>
+            <option>NZD/JPY OTC</option>
+
+        </select>
+
+    </div>
+
+    <!-- Timer -->
+    <div class="input-box">
+
+        <label>Timer</label>
+
+        <select id="timer">
+
+            <option value="5">5 Seconds</option>
+            <option value="10">10 Seconds</option>
+            <option value="15">15 Seconds</option>
+            <option value="30">30 Seconds</option>
+            <option value="60">1 Minute</option>
+
+        </select>
+
+    </div>
+
+    <!-- Signal -->
+
+    <div id="signal">
+
+        Waiting...
+
+    </div>
+
+    <!-- Countdown -->
+
+    <div id="countdown">
+
+        00
+
+    </div>
+
+    <!-- Button -->
+
+    <button id="generateBtn">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        Generate Signal
+
+    </button>
+    <br>
+    <br> 
+
+    <div class="social-links">
+    
+    <a href="https://t.me/trshemantoofficial">join on telegram <i class="fa-brands fa-telegram"></i></a>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
