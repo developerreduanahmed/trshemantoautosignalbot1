@@ -1,61 +1,50 @@
 *{
     margin:auto;
-    padding:0;
+    padding: 5px;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif
 }
 
-body{
+body {
+    position: relative;
+    background: #020101;
+}
 
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#0bb902;
-
-    background-image:url("bg.jpg"); /* চাইলে নিজের ছবি দিন */
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("tr.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .container{
 
-    width:320px;
+    width:350px;
+    height: 550px;
 
-    padding:22px;
+    padding:0px;
 
     border-radius:25px;
 
     text-align:center;
 
-    background:#0b7d18;
 
-    border:3px solid #43ff5f;
-
-    box-shadow:
-    0 0 20px #00ff66,
-    0 0 40px #00ff66;
-
+ 
 }
 
 h1{
 
-    color:#ff7cff;
+    color:#f600f6;
     font-size:50px;
     font-weight:bold;
 
     text-shadow:
-    0 0 10px #f308f3,
-    0 0 20px #ff00ff;
+    0 0 5px #f308f3,
+    0 0 0px #ff00ff;
 
 }
 
@@ -85,9 +74,9 @@ h2{
 
 label{
 
-    color:white;
+    color:rgb(255, 254, 254);
 
-    font-size:24px;
+    font-size:30px;
 
     font-weight:bold;
 
@@ -95,9 +84,9 @@ label{
 
 select{
 
-    width:220px;
+    width:160px;
 
-    padding:12px;
+    padding:10px;
 
     border-radius:12px;
 
@@ -115,26 +104,24 @@ select{
 
 #signal{
 
-    margin-top:40px;
+    margin-top:0px;
 
-    font-size:55px;
+    font-size:35px;
 
     font-weight:bold;
 
     color:#54ff72;
 
-    text-shadow:
-    0 0 15px #00ff66;
-
+   
 }
 
 #countdown{
 
-    margin-top:15px;
+    margin-top:0px;
 
-    font-size:35px;
+    font-size:50px;
 
-    color:white;
+    color:rgb(63, 245, 2);
 
     font-weight:bold;
 
@@ -142,15 +129,15 @@ select{
 
 button{
 
-    margin-top:35px;
+    margin-top:3px;
 
-    width:100%;
+    width:75%;
 
-    padding:18px;
+    padding:5px;
 
     border:none;
 
-    border-radius:60px;
+    border-radius:10px;
 
     cursor:pointer;
 
@@ -163,8 +150,8 @@ button{
     background:linear-gradient(90deg,#00ff66,#00b33c);
 
     box-shadow:
-    0 0 20px #00ff66,
-    0 0 40px #00ff66;
+    0 0 0px #00ff66,
+    0 0 0px #00ff66;
 
     transition:.3s;
 
@@ -175,8 +162,8 @@ button:hover{
     transform:scale(1.05);
 
     box-shadow:
-    0 0 25px #00ff66,
-    0 0 50px #00ff66;
+    0 0 5px #00ff66,
+    0 0 0px #00ff66;
 
 }
 
@@ -204,7 +191,7 @@ h1{
 
 h2{
 
-    font-size:30px;
+    font-size:25px;
 
 }
 
@@ -222,10 +209,25 @@ select{
 
 #signal{
 
-    font-size:45px;
+    font-size:40px;
 
 }
 }
+a{
+    font-size:20px;
+    background-color: #18d7d7;
+    border: 2px solid ;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 10px;
+    letter-spacing: 0px;
+    padding: 10px;
+    
 
+    
+    
+
+}
 
 
