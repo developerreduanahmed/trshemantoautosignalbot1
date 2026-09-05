@@ -26,14 +26,14 @@ function generateSignal() {
         signal.style.color = "#ff3333";
     }
 
-    countdown.innerHTML = time + "s";
+    countdown.innerHTML = time + " ";
 
     let interval = setInterval(() => {
 
         time--;
 
         if (time > 0) {
-            countdown.innerHTML = time + "s";
+            countdown.innerHTML = time + " ";
         } else {
 
             clearInterval(interval);
