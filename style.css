@@ -17,6 +17,7 @@ body::before {
     background-image: url("tr.jpeg");
     background-size: cover;
     background-position: center;
+    backgraound-repeat: no-repeat;
     opacity: 0.4;
     z-index: -1;
 }
@@ -172,7 +173,7 @@ button i{
 
 }
 
-@media(max-width:450px){
+@media(max-width:600px){
 
 .container{
 
