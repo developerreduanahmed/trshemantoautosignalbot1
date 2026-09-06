@@ -17,7 +17,6 @@ body::before {
     background-image: url("tr.jpeg");
     background-size: cover;
     background-position: center;
-    backgraound-repeat: no-repeat;
     opacity: 0.4;
     z-index: -1;
 }
@@ -32,7 +31,9 @@ body::before {
     border-radius:25px;
 
     text-align:center;
-    
+
+
+ 
 }
 
 h1{
@@ -110,6 +111,7 @@ select{
     font-weight:bold;
 
     color:#54ff72;
+
    
 }
 
@@ -173,7 +175,7 @@ button i{
 
 }
 
-@media(max-width:600px){
+@media(max-width:450px){
 
 .container{
 
@@ -222,6 +224,122 @@ a{
     letter-spacing: 0px;
     padding: 10px;
     
+}
+/* লাফানোর (Pulse/Blink) অ্যানিমেশন */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(15, 6, 6, 0.3);
+    }
+    50% {
+        transform: scale(1.05); /* হালকা বড় হয়ে লাফাবে */
+        box-shadow: 0 0 25px currentColor; /* চারপাশে গ্লো করবে */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* সিগন্যাল বক্সের মূল স্টাইল */
+#signal {
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* BUY সিগন্যালের ব্যাকগ্রাউন্ড স্টাইল */
+.bg-buy {
+    background-color: #00e676 !important;
+    color: #000000 !important;
+    animation: pulseAnimation 0.8s infinite ease-in-out;
+}
+
+/* SELL সিগন্যালের ব্যাকগ্রাউন্ড স্টাইল */
+.bg-sell {
+    background-color: #ff1744 !important;
+    color: #ffffff !important;
+    animation: pulseAnimation 0.8s infinite ease-in-out;
+}
+
+/* Analyzing এবং ডিফল্ট স্টেটের স্টাইল */
+.bg-analyzing {
+    background-color: #fbb503 !important;
+    color: #000000 !important;
+}
+
+.bg-default {
+    background-color: transparent;
+    color: #ffffff;
+}
+/* ঘুরার (Spin) অ্যানিমেশন */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* লাফানোর (Pulse) অ্যানিমেশন */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px currentColor;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ঘোরার আইকন کلاس */
+.spinner-icon {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+/* সিগন্যাল বক্সের মূল স্টাইল */
+#signal {
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Analyzing ব্যাকগ্রাউন্ড স্টাইল */
+.bg-analyzing {
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}
+
+/* BUY সিগন্যালের ব্যাকগ্রাউন্ড + অ্যানিমেশন */
+.bg-buy {
+    background-color: #00e676 !important;
+    color: #000000 !important;
+    animation: pulseAnimation 0.8s infinite ease-in-out;
+}
+
+/* SELL সিগন্যালের ব্যাকগ্রাউন্ড + অ্যানিমেশন */
+.bg-sell {
+    background-color: #ff1744 !important;
+    color: #ffffff !important;
+    animation: pulseAnimation 0.8s infinite ease-in-out;
+}
+
+/* ডিফল্ট স্টেট */
+.bg-default {
+    background-color: transparent;
+    color: #ffffff;
 }
 
 
