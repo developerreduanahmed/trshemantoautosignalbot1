@@ -4,139 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TR Shemanto Auto Signal Bot</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
- 
+    <div class="container">
+        <div id="utcTime"></div>
 
-<div class="container">
-   <div id="utcTime"></div>
+        <h1>TR Shemanto</h1>
+        <h2>Auto Signal Bot</h2>
 
-    <h1>TR Shemanto</h1>
+        <!-- Market -->
+        <div class="input-box">
+            <label>Market</label>
+            <div class="market-select-container">
+                <input
+                    type="text"
+                    id="marketSearch"
+                    placeholder="Search Market..."
+                    autocomplete="off"
+                >
 
-    <h2>Auto Signal Bot</h2>
+                <div id="marketList" class="dropdown-content">
+                    <div class="market-group">REAL MARKETS </div>
+                    <div class="market-option">EUR/USD</div>
+                    <div class="market-option">GBP/USD</div>
+                    <div class="market-option">USD/JPY</div>
+                    <div class="market-option">USD/CHF</div>
+                    <div class="market-option">AUD/USD</div>
+                    <div class="market-option">USD/CAD</div>
+                    <div class="market-option">NZD/USD</div>
+                    <div class="market-option">EUR/GBP</div>
+                    <div class="market-option">EUR/JPY</div>
+                    <div class="market-option">GBP/JPY</div>
+                    <div class="market-option">EUR/CHF</div>
+                    <div class="market-option">AUD/JPY</div>
+                    <div class="market-option">CAD/JPY</div>
+                    <div class="market-option">GBP/CHF</div>
+                    <div class="market-option">NZD/JPY</div>
+                    <div class="market-option">AUD/CAD</div>
+                    <div class="market-option">AUD/CHF</div>
+                    <div class="market-option">AUD/NZD</div>
+                    <div class="market-option">CAD/CHF</div>
+                    <div class="market-option">CHF/JPY</div>
+                    <div class="market-option">EUR/AUD</div>
+                    <div class="market-option">EUR/CAD</div>
+                    <div class="market-option">EUR/NZD</div>
+                    <div class="market-option">GBP/AUD</div>
+                    <div class="market-option">GBP/CAD</div>
+                    <div class="market-option">GBP/NZD</div>
+                    <div class="market-option">NZD/CAD</div>
+                    <div class="market-option">NZD/CHF</div>
+                    <div class="market-option">USD/BRL</div>
+                    <div class="market-option">USD/MXN</div>
+                    <div class="market-option">USD/TRY</div>
+                    <div class="market-option">USD/SGD</div>
+                    <div class="market-option">USD/ZAR</div>
+                    <div class="market-option">USD/HKD</div>
+                    <div class="market-option">USD/INR</div>
 
-    <!-- Market -->
-    <div class="input-box">
-        <label>Market</label>
+                    <div class="market-group">OTC MARKETS </div>
+                    <div class="market-option">EUR/USD (OTC)</div>
+                    <div class="market-option">GBP/USD (OTC)</div>
+                    <div class="market-option">USD/JPY (OTC)</div>
+                    <div class="market-option">USD/CHF (OTC)</div>
+                    <div class="market-option">AUD/USD (OTC)</div>
+                    <div class="market-option">USD/CAD (OTC)</div>
+                    <div class="market-option">NZD/USD (OTC)</div>
+                    <div class="market-option">EUR/GBP (OTC)</div>
+                    <div class="market-option">EUR/JPY (OTC)</div>
+                    <div class="market-option">GBP/JPY (OTC)</div>
+                    <div class="market-option">EUR/CHF (OTC)</div>
+                    <div class="market-option">AUD/JPY (OTC)</div>
+                    <div class="market-option">CAD/JPY (OTC)</div>
+                    <div class="market-option">GBP/CHF (OTC)</div>
+                    <div class="market-option">NZD/JPY (OTC)</div>
+                    <div class="market-option">AUD/CAD (OTC)</div>
+                    <div class="market-option">AUD/CHF (OTC)</div>
+                    <div class="market-option">AUD/NZD (OTC)</div>
+                    <div class="market-option">CAD/CHF (OTC)</div>
+                    <div class="market-option">CHF/JPY (OTC)</div>
+                    <div class="market-option">EUR/AUD (OTC)</div>
+                    <div class="market-option">EUR/CAD (OTC)</div>
+                    <div class="market-option">EUR/NZD (OTC)</div>
+                    <div class="market-option">GBP/AUD (OTC)</div>
+                    <div class="market-option">GBP/CAD (OTC)</div>
+                    <div class="market-option">GBP/NZD (OTC)</div>
+                    <div class="market-option">NZD/CAD (OTC)</div>
+                    <div class="market-option">NZD/CHF (OTC)</div>
+                    <div class="market-option">USD/BRL (OTC)</div>
+                    <div class="market-option">USD/MXN (OTC)</div>
+                    <div class="market-option">USD/TRY (OTC)</div>
+                    <div class="market-option">USD/SGD (OTC)</div>
+                    <div class="market-option">USD/ZAR (OTC)</div>
+                    <div class="market-option">USD/HKD (OTC)</div>
+                    <div class="market-option">USD/INR (OTC)</div>
+                    <div class="market-option">USD/DOP (OTC)</div>
+                    <div class="market-option">USD/EGP (OTC)</div>
+                    <div class="market-option">USD/PKR (OTC)</div>
+                    <div class="market-option">USD/BDT (OTC)</div>
+                    <div class="market-option">USD/NGN (OTC)</div>
+                    <div class="market-option">USD/PHP (OTC)</div>
+                    <div class="market-option">USD/IDR (OTC)</div>
+                    <div class="market-option">USD/MYR (OTC)</div>
+                    <div class="market-option">USD/THB (OTC)</div>
+                    <div class="market-option">USD/VND (OTC)</div>
+                    <div class="market-option">USD/ARS (OTC)</div>
+                    <div class="market-option">USD/COP (OTC)</div>
+                    <div class="market-option">USD/CLP (OTC)</div>
+                    <div class="market-option">USD/PEN (OTC)</div>
+                    <div class="market-option">USD/DZD (OTC)</div>
+                </div>
+            </div>
+        </div>
 
-       <select id="market">
-    <optgroup label="REAL">
-        <option>EUR/USD</option>
-        <option>GBP/USD</option>
-        <option>USD/JPY</option>
-        <option>USD/CHF</option>
-        <option>AUD/USD</option>
-        <option>USD/CAD</option>
-        <option>NZD/USD</option>
-        <option>EUR/GBP</option>
-        <option>EUR/JPY</option>
-        <option>GBP/JPY</option>
-        <option>EUR/CHF</option>
-        <option>AUD/JPY</option>
-        <option>CAD/JPY</option>
-        <option>GBP/CHF</option>
-        <option>NZD/JPY</option>
-    </optgroup>
+        <!-- Timer -->
+        <div class="input-box">
+            <label>Timer</label>
+            <select id="timer">
+                <option value="5">5 Seconds</option>
+                <option value="10">10 Seconds</option>
+                <option value="15">15 Seconds</option>
+                <option value="30">30 Seconds</option>
+                <option value="60">1 Minute</option>
+            </select>
+        </div>
 
-    <optgroup label="OTC">
-        <option>EUR/USD (OTC)</option>
-        <option>GBP/USD (OTC)</option>
-        <option>USD/JPY (OTC)</option>
-        <option>USD/CHF (OTC)</option>
-        <option>AUD/USD (OTC)</option>
-        <option>USD/CAD (OTC)</option>
-        <option>NZD/USD (OTC)</option>
-        <option>EUR/GBP (OTC)</option>
-        <option>EUR/JPY (OTC)</option>
-        <option>GBP/JPY (OTC)</option>
-        <option>EUR/CHF (OTC)</option>
-        <option>AUD/JPY (OTC)</option>
-        <option>CAD/JPY (OTC)</option>
-        <option>GBP/CHF (OTC)</option>
-        <option>NZD/JPY (OTC)</option>
-        <option>AUD/CAD (OTC)</option>
-        <option>AUD/CHF (OTC)</option>
-        <option>AUD/NZD (OTC)</option>
-        <option>CAD/CHF (OTC)</option>
-        <option>CHF/JPY (OTC)</option>
-        <option>EUR/AUD (OTC)</option>
-        <option>EUR/CAD (OTC)</option>
-        <option>EUR/NZD (OTC)</option>
-        <option>GBP/AUD (OTC)</option>
-        <option>GBP/CAD (OTC)</option>
-        <option>GBP/NZD (OTC)</option>
-        <option>NZD/CAD (OTC)</option>
-        <option>NZD/CHF (OTC)</option>
-        <option>USD/BRL (OTC)</option>
-        <option>USD/MXN (OTC)</option>
-        <option>USD/TRY (OTC)</option>
-        <option>USD/SGD (OTC)</option>
-        <option>USD/ZAR (OTC)</option>
-        <option>USD/HKD (OTC)</option>
-    </optgroup>
-</select>
+        <!-- Signal -->
+        <div id="signal" class="bg-default">
+            Waiting...
+        </div>
+
+        <!-- Countdown -->
+        <div id="countdown">
+            00
+        </div>
+
+        <!-- Button -->
+        <button id="generateBtn">
+            <i class="fa-solid fa-bolt"></i>
+            Generate Signal
+        </button>
+
+        <br><br>
+
+        <div class="social-links">
+            <a href="https://t.me/trshemantoofficial" target="_blank">
+                JOIN ON TELEGRAM
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+        </div>
     </div>
 
-    <!-- Timer -->
-    <div class="input-box">
-
-        <label>Timer</label>
-
-        <select id="timer">
-
-            <option value="5">5 Seconds</option>
-            <option value="10">10 Seconds</option>
-            <option value="15">15 Seconds</option>
-            <option value="30">30 Seconds</option>
-            <option value="60">1 Minute</option>
-
-        </select>
-
-    </div>
-
-    <!-- Signal -->
-
-    <div id="signal">
-
-        Waiting...
-
-    </div>
-
-    <!-- Countdown -->
-
-    <div id="countdown">
-
-        00
-
-    </div>
-
-    <!-- Button -->
-
-    <button id="generateBtn">
-
-        <i class="fa-solid fa-bolt"></i>
-
-        Get Signal
-
-    </button>
-    <br>
-    <br> 
-
-    <div class="social-links">
-    
-    <a href="https://t.me/trshemantoofficial">JOIN ON TELEGRAM <i class="fa-brands fa-telegram"></i></a>
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
+   <div class="pw">
+     <p>
+        <i class="fa-solid fa-triangle-exclamation"></i>Warning<i class="fa-solid fa-triangle-exclamation"></i>
+    </p>
+   </div>
+   <div class="wp">
+     <p>
+        ট্রেডিং খুবই রিস্কি প্লার্টফর্ম সবাই মানি ম্যানেজমেন্ট ফলো করে ট্রেড করবেন।
+        <p>কখনো ওভার ট্রেডিং করবেন না।</p>
+    </p>
+   </div>
 </body>
 </html>
